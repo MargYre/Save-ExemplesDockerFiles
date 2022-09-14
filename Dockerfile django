@@ -1,0 +1,8 @@
+#Use the Python3.7.2 container image
+FROM python:latest
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+ENV PYTHONUNBUFFERED 1
+#CMD ["python3", "manage.py", "runserver", "0.0.0.0:90"]
+#RUN python3 manage.py runserver
